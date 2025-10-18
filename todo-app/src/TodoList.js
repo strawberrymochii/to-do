@@ -22,6 +22,30 @@ function deleteTodo(id) {
     setTodos(todos.filter(todo => todo.id !== id));
 }
 
+
+function editTodo(id, newText) {
+    // // setTodos(todos.map(todo => {
+    //     const updatedTodo = {(todos.map(todo => {
+    //         if (todo.id === id) {
+    //             return {...todo, text: newText};
+    //         }
+    //         else {
+    //         return todo;
+    //     }
+    //     }));};
+    //     setTodos(updatedTodo);
+
+    // };
+    const updatedTodos = todos.map(todo => {
+        if (todo.id === id) {
+            todo.text = newText;
+        }
+        return todo;
+    });
+
+    setTodos(updatedTodos);
+}
+
 function showCompleted(id) {
     setTodos(todos.map(todo => {
         if (todo.id === id) {
@@ -36,12 +60,15 @@ function showCompleted(id) {
 return (
 
 <div className="todo-list">
+    <div className="header"><h1>To-do List</h1></div>
     {todos.map(todo => (
         <TodoItem
         key={todo.id}
         todo={todo}
         deleteTodo={deleteTodo}
-        showCompleted={showCompleted}/>
+        showCompleted={showCompleted}
+        editTodo={editTodo}
+        />
     ))}
     <div className="input">
         <input

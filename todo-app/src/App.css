@@ -1,8 +1,14 @@
 .todo-list{
   margin: 5%;
   border-style: solid;
+  border-radius: 1em;
+  border-color: palegoldenrod;
   padding: 2%;
-  
+}
+
+.header{
+  text-align: center;
+  color: darkorange;
 }
 .todo-item{
   display: flex;
@@ -13,16 +19,24 @@
   margin: 2% auto;
   width: 50%;
   border-style: solid;
+  border-radius: 1em;
+  border-color:chartreuse;
+  padding: 0.1%;
+}
 
+.todo-item input[type="checkbox"]{
+  transform: scale(1.5);
 }
 
 .input{
   display:flex;
   gap:2%;
   justify-content: center;
+  border-radius: 1em;
+  margin: 2% auto;
 }
 
-.todo-item.completed {
+.todo-item completed {
   text-decoration: line-through;
   color: rgb(159, 159, 159);
 }

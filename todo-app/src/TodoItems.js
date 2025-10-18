@@ -1,8 +1,11 @@
-import React from 'react';
-function TodoItems({ todo, deleteTodo, showCompleted }) {
+import React, {useState} from 'react';
+function TodoItems({ todo, deleteTodo, showCompleted, editTodo}) {
     function handleChange() {
         showCompleted(todo.id);
     }
+
+    const [edit, setEdit] = useState(false);
+    const [editText, setEditText] = useState(todo.text);
 
     return (
         <div className="todo-item">
@@ -10,10 +13,14 @@ function TodoItems({ todo, deleteTodo, showCompleted }) {
                 type="checkbox"
                 checked={todo.completed}
                 onChange={handleChange}
-                // <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}></span>
             />
+            <div className={todo.completed ? "strike" : ""}
+            >
+            
+            </div>
             <p>{todo.text}</p>
             <button onClick={() => deleteTodo(todo.id)}>X</button>
+            <button onClick={() => editTodo(todo.id, )}>Edit</button>
 
         </div>
     );
