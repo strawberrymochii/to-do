@@ -15,8 +15,27 @@ function TodoItems({ todo, deleteTodo, showCompleted, editTodo}) {
                 onChange={handleChange}
             />
             <div className={todo.completed ? "strike" : ""}
+            onDoubleClick={() => {
+                if (!todo.completed) {
+                    setEdit(true);
+                }
+            }}
             >
-            
+                {edit ? (
+                    <input
+                    type = "text"
+                    value={editText}
+                    onChange={(e) => 
+                        {setEditText(e.target.value);
+                    }}
+                    onBlur={() => {
+                        setEdit(false);
+                        editTodo(todo.id, editText);
+                    }}
+                    />
+                ) : (
+                    text
+                )}
             </div>
             <p>{todo.text}</p>
             <button onClick={() => deleteTodo(todo.id)}>X</button>
