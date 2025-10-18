@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import TodoItem from './TodoItem';
+import TodoItem from './TodoItems';
 
 function TodoList() {
     const [todos, setTodos] = useState([
-        { id: 1, text: 'Learn React', completed: false },
-        { id: 2, text: 'Build Todo app', completed: true}
+        { id: 1, text: 'new task', completed: false },
     ]);
 
     const [text, setText] = useState('');
@@ -35,6 +34,7 @@ function showCompleted(id) {
 }
 
 return (
+
 <div className="todo-list">
     {todos.map(todo => (
         <TodoItem
@@ -43,12 +43,15 @@ return (
         deleteTodo={deleteTodo}
         showCompleted={showCompleted}/>
     ))}
-    <input
+    <div className="input">
+        <input
     type="text"
-    value="text"
+    placeholder="Add new todo"
     onChange={e => setText(e.target.value)}
     />
+    
     <button onClick={() => addTodo(text)}>Add todo</button>
+    </div>
 </div>
 );
 }
