@@ -1,20 +1,9 @@
-# express_node_template
+# to-do
 
-This is a basic Node.js & Express template.
+to-do is a browser based to do list. I often write my to do lists on pieces of paper that I end up losing, so this project was also a way to create a to do app that I could keep open in my conputer tabs to remind me to update to dos.
 
-To use it, follow these steps:
+This to do list app was made using React JS, HTML and CSS. This was my first time using a Javascript framework, and I used many online resources, like W3Schools and Medium to figure out how to use it. I learned how to create and start apps with React, as well as how to code with it. I also followed some to do list app tutorials to get an idea of what my to do list app would need. The biggest challenge I had was figuring out how to allow editing the to do list items, as well as styling the app, since I had to reorganize all the buttons and text fields that I grouped together weirdly.
 
-**1.** Go to the top-left corner and click **"Use this template"** to open a dropdown.  
-![Step 1](images/1.png)
 
-**2.** In the dropdown, click **"Create a new repository"**.  
-![Step 2](images/2.png)
 
-**3.** Set your desired repository name.  
-![Step 3](images/3.png)
 
-**4.** Click **"Create repository"**.  
-![Step 4](images/4.png)
-
-**5.** In the newly created repository, click the green **"Code"** button, then select **"Create codespace on main"**.  
-![Step 5](images/5.png)
