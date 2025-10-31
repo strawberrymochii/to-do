@@ -6,26 +6,69 @@
   padding: 2%;
 }
 
+button{
+  padding: 1% 1.5%;
+  border-radius: 0.1em;
+  border-style: solid;
+  border-color: rgb(204, 222, 240);
+  background-color:rgb(225, 236, 247);
+  border-width: 0.01em;
+}
+
+button:hover{
+  background-color:rgb(184, 194, 204); 
+}
+
 .header{
   text-align: center;
   color: darkorange;
 }
 .todo-item{
   display: flex;
-  justify-content: space-around;
-  align-self: center;
-  align-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 1em;
   margin: 2% auto;
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
   border-style: solid;
   border-radius: 1em;
   border-color:chartreuse;
-  padding: 0.1%;
+  padding: 2%;
 }
+
+.todo-item .container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.todo-item input[type="text"]{
+  flex: 1;
+  padding: 0.5em 1em;
+  border-style: solid;
+  border-radius: 0.1em;
+  box-sizing: border-box;
+}
+
+.buttons{
+  display: flex;
+  gap: 1em;
+}
+
+.buttons button{
+  padding: 0.5em;
+}
+
 
 .todo-item input[type="checkbox"]{
   transform: scale(1.5);
+  margin-right: 0.5em;
+
+}
+
+input[type="text"]{
+  padding: 1em;
 }
 
 .input{
@@ -36,7 +79,3 @@
   margin: 2% auto;
 }
 
-.todo-item completed {
-  text-decoration: line-through;
-  color: rgb(159, 159, 159);
-}
